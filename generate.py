@@ -179,12 +179,17 @@ Return a JSON object with exactly these fields:
 {{
   "top_stories": [
     {{
-      "title": "Punchy, specific headline — rewrite it to be clear and direct",
-      "url": "url from source",
-      "source": "source name",
-      "description": "2-3 sentence description. Be specific: names, numbers, context, why it matters."
+      "category": "Category name — e.g. Politics, International, Economy, Justice, Climate, Technology, Culture. Use whatever categories fit today's news. Aim for 3-5 categories total.",
+      "stories": [
+        {{
+          "title": "Punchy, specific headline — rewrite it to be clear and direct",
+          "url": "url from source",
+          "source": "source name",
+          "description": "2-3 sentence description. Be specific: names, numbers, context, why it matters."
+        }}
+      ]
     }}
-  ],  // 6-8 stories, the most important of the day across all main sources
+  ],  // 3-5 category buckets, 2-3 stories each, covering the most important news of the day
 
   "right_summary": "HTML synthesis of what right-wing media is focused on today. Format as a series of bullet points (<ul><li>...</li></ul>), one per major topic or argument. Each bullet should be 2-4 sentences. Use <strong> to bold the most important names, numbers, and claims. Include inline <a href='...'> links to the specific articles, opinion pieces, or tweets being discussed — link directly to the source making the argument, not just a homepage. Be specific: name the commentators, quote them, explain the arguments. If any bullets touch on higher education, universities, or Trump vs. colleges/academia, include them and bold the key claims.",
 
@@ -317,11 +322,14 @@ def render_html(data):
 
     sections.append(divider())
 
-    # Top stories
-    sections.append(dot_section(
-        "Top of the News", COLORS["sage"],
-        story_list(data["top_stories"], show_desc=True)
-    ))
+    # Top stories — categorized
+    color_cycle = [COLORS["sage"], COLORS["steel"], COLORS["terra"], COLORS["clay"], COLORS["indigo"]]
+    for i, bucket in enumerate(data["top_stories"]):
+        color = color_cycle[i % len(color_cycle)]
+        sections.append(dot_section(
+            bucket["category"], color,
+            story_list(bucket["stories"], show_desc=True)
+        ))
 
     # Must reads
     sections.append(dot_section(
