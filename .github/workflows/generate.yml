@@ -1,0 +1,35 @@
+name: Generate Daily Briefing
+
+on:
+  schedule:
+    - cron: '0 11 * * 1-5'  # 7am ET weekdays (11:00 UTC)
+  workflow_dispatch:          # also lets you trigger it manually from GitHub
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic feedparser
+
+      - name: Generate newsletter
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python generate.py
+
+      - name: Commit and push updated newsletter
+        run: |
+          git config user.name "Daily Briefing Bot"
+          git config user.email "actions@github.com"
+          git add index.html archive/
+          git diff --cached --quiet || git commit -m "Briefing for $(date +'%B %d, %Y')"
+          git push

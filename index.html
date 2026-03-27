@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Briefing — Friday, March 27, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f7f5f0;
+            color: #2c2a25;
+            line-height: 1.75;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            -webkit-font-smoothing: antialiased;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #b5b0a6;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .masthead {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            color: #2c2a25;
+            line-height: 1.1;
+        }
+        .for-line {
+            font-family: 'Newsreader', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #b5b0a6;
+            margin-top: 0.35rem;
+        }
+        .date {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 400;
+            color: #8a857c;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            margin-top: 0.4rem;
+        }
+        section { margin-bottom: 2.2rem; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+        .section-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #8a857c;
+        }
+        .section-line {
+            flex: 1;
+            height: 1px;
+            background: #e4e0d8;
+        }
+        .link-list { list-style: none; padding: 0; }
+        .link-list li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(228,224,216,0.5);
+        }
+        .link-list li:last-child { border-bottom: none; }
+        .link-list a {
+            font-family: 'Inter', sans-serif;
+            color: #2c2a25;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .link-list a:hover { color: #555; }
+        .link-list .source {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: #b5b0a6;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-left: 0.4rem;
+        }
+        .link-list .desc {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #4a4640;
+            margin-top: 0.2rem;
+            line-height: 1.6;
+        }
+        .synthesis {
+            background: #fffef9;
+            border-radius: 10px;
+            padding: 1.3rem 1.4rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #2c2a25;
+            border: 1px solid #e4e0d8;
+        }
+        .synthesis p { margin-bottom: 0.9rem; }
+        .synthesis p:last-child { margin-bottom: 0; }
+        .synthesis ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .synthesis ul li {
+            padding: 0.75rem 0 0.75rem 1.1rem;
+            border-bottom: 1px solid rgba(228,224,216,0.6);
+            position: relative;
+            line-height: 1.7;
+        }
+        .synthesis ul li:last-child { border-bottom: none; padding-bottom: 0; }
+        .synthesis ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #b5b0a6;
+            font-weight: 300;
+        }
+        .synthesis strong { font-weight: 600; color: #1a1816; }
+        .synthesis a {
+            color: #2c2a25;
+            text-decoration: underline;
+            text-decoration-color: rgba(0,0,0,0.25);
+            text-underline-offset: 2px;
+        }
+        .synthesis a:hover { text-decoration-color: #2c2a25; }
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.8rem 0;
+            gap: 0.5rem;
+        }
+        .divider-dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #b5b0a6;
+        }
+        footer {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            color: #b5b0a6;
+            letter-spacing: 0.04em;
+            line-height: 1.8;
+        }
+        @media (max-width: 600px) {
+            body { padding: 1.5rem 1rem 3rem; }
+            .masthead { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="masthead">Daily Briefing</div>
+    <div class="for-line">for Natalie</div>
+    <div class="date">Friday, March 27, 2026</div>
+</header>
+
+<main>
+
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #7a6b5a;"></div>
+        <h2>What the Right Is Saying</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="synthesis"><ul><li><strong>House conservatives revolt over DHS deal:</strong> Right-wing media led with fury over the Senate's late-night vote to end the DHS shutdown. <a href='https://www.foxnews.com/politics/house-conservatives-rage-against-senate-dhs-shutdown-deal'>Fox News reports</a> that House conservatives view the deal as a capitulation, while <a href='https://www.nationalreview.com/2026/03/the-week-the-dhs-funding-crisis-continues/'>National Review's editors</a> frame the funding crisis as emblematic of a broader inability to enforce spending discipline. The <a href='https://www.washingtonexaminer.com/news/senate/4506101/winners-losers-dhs-shutdown-end/'>Washington Examiner tallied winners and losers</a>, suggesting the Senate deal shortchanges immigration enforcement priorities.</li><li><strong>Meta social media verdict sparks pushback:</strong> After a landmark California jury found Meta liable for addicting children, <a href='https://www.nationalreview.com/2026/03/california-jury-gets-it-wrong-on-social-media/'>National Review argued the jury got it wrong</a>, calling the verdict a threat to free speech and innovation. <a href='https://www.foxnews.com/media/meta-vows-aggressively-fight-verdicts-finding-liable-addicting-children-social-media'>Fox News covered Meta's vow to "aggressively" fight the ruling</a>. Meanwhile, AOC's call for politicians to reject "AI money" drew conservative scorn as tech-sector overreach.</li><li><strong>Scott Bessent and trade policy:</strong> The <a href='https://www.wsj.com/articles/scott-bessent-can-walk-the-trade-tightrope-policy-economy-treasury-dfa140df'>WSJ editorial board profiled Treasury Secretary Scott Bessent</a> as the administration's steadiest hand, arguing he can navigate the tension between Trump's tariff instincts and market stability. A separate <a href='https://www.wsj.com/articles/lumber-tariffs-and-disaster-recovery-canada-california-fires-4ec8f2e0'>WSJ opinion piece</a> warned that <strong>Trump's lumber tariffs are directly raising the cost of disaster recovery</strong>, particularly for California fire rebuilding.</li><li><strong>RFK Jr. declared a public health danger:</strong> A pointed <a href='https://www.wsj.com/articles/rfk-jr-senate-hearing-heath-and-human-services-vaccines-trial-lawyers-ce7703cf'>WSJ editorial called RFK Jr. "dangerous to public health,"</a> citing his Senate hearing performance and his empowerment of trial lawyers over sound vaccine science — a notable rebuke from the paper's conservative opinion page.</li><li><strong>Higher education probes:</strong> Conservative outlets largely cheered the <a href='https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTUZubnNDTkxCZmFWbDRoSVY1SFhVblZ2Y3RRNThYS0tSTzg1VDVMWEctd2VaMzA0M2FJbWtCUnJmYnhMdllSTXlWZ21xTmJfYzE0Q2JvdVl0dUMwTnhXWHljTmNKSkVCcWZzbGJ4cjV6dlNldU00akpQMW9PREV2aXAzRGxwQm05R3RYOWo3TzloX2IzSkptdVFsQkRiandPTGx6aUFyUmg4M28wdHJyYW9aVEE0VEw0bklicm5DVjEwWTJHTmU5bGtEdVFDbFZvN1E?oc=5'>Trump administration investigations into Stanford, Ohio State, and UCSD medical schools</a> over admissions policies. <a href='https://www.nationalreview.com/2026/03/how-vulnerable-is-america-to-an-operation-spiderweb-at-home-very/'>National Review</a> connected the university crackdown to broader security vulnerabilities, arguing that <strong>ideological capture of elite institutions is itself a national security issue</strong>.</li><li><strong>Redistricting battles in Virginia and California:</strong> <a href='https://thefederalist.com/2026/03/27/cocky-virginia-dems-starting-to-sweat-over-aprils-referendum-on-rigged-political-maps/'>The Federalist ran multiple pieces</a> arguing Virginia Democrats are sweating over an April redistricting referendum, while <a href='https://www.axios.com/2026/03/27/california-newsom-obama-prop-50-redistricting'>Axios reported that Barack Obama personally urged Newsom</a> on California's Prop 50 redistricting push — a story the right frames as evidence of continued Democratic gerrymandering ambitions.</li><li><strong>Kristi Noem's departure and DHS leadership:</strong> <a href='https://www.washingtonexaminer.com/news/white-house/4506288/watch-live-vance-hosts-first-white-house-fraud-meeting/'>The Examiner covered Vance hosting his first White House fraud meeting</a>, while the broader question of who now leads DHS — after Noem's departure — remains a major topic across right-leaning media, with the implication that <strong>her successor, reportedly Markwayne Mullin, will accelerate deportations</strong>.</li></ul></div>
+</section>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #8a6b7a;"></div>
+        <h2>What the Left Is Saying</h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="synthesis"><ul><li><strong>"Trump is losing the Iran war":</strong> <a href='https://www.thenation.com/article/world/trump-losing-iran-war/'>The Nation's lead analysis</a> argues bluntly that Trump's shifting deadlines and inability to secure a resolution mean he is losing the Iran conflict on both military and diplomatic fronts. <a href='https://www.vox.com/the-logoff-newsletter-trump/484009/donald-trump-iran-war-negotiation-deadline-power-traits-strait-hormuz'>Vox dissected the moving deadlines</a>, arguing that each postponement erodes credibility. The economic consequences — food supply bottlenecks, diesel spikes, grocery inflation — dominate progressive framing of the war as an avoidable catastrophe.</li><li><strong>Democracy in crisis — and progressive media's own reckoning:</strong> <a href='https://www.thenation.com/article/politics/united-states-v-dem-trump-autocracy-democracy/'>The Nation published a sweeping piece on the "rapid and unprecedented collapse of American democracy,"</a> citing democratic backsliding metrics. But in a self-critical companion essay, <a href='https://www.thenation.com/article/politics/pro-democracy-substack-echo-chamber-organizing-gap-media-critique/'>The Nation also critiqued the "bad-news echo chamber" of pro-democracy Substack</a>, arguing that progressive media is better at alarming people than organizing them. <strong>The Atlantic's piece on Hungary as the "first post-reality political campaign"</strong> <a href='https://www.theatlantic.com/ideas/2026/03/hungary-first-post-reality-political-campaign/686565/?utm_source=feed'>drew explicit parallels to U.S. trends</a>.</li><li><strong>Mass deportations poised to accelerate after Noem:</strong> <a href='https://www.theatlantic.com/politics/2026/03/kristi-noem-deportations-mullin-dhs-ice/686557/'>The Atlantic argues that Kristi Noem's departure from DHS clears the way for the true mass deportation apparatus</a>, with her successor expected to be far more aggressive. The <a href='https://www.latimes.com/politics/story/2026-03-27/dhs-attorney-said-agents-in-los-angeles-should-have-started-hitting-protesters-emails-show'>LA Times revealed internal DHS emails</a> showing a DHS attorney said agents in Los Angeles <strong>should have "started hitting" protesters</strong> — a damning disclosure likely to fuel legal challenges.</li><li><strong>Meta verdict as gateway for AI litigation:</strong> <a href='https://www.thenation.com/article/society/meta-youtube-ai-litigation/'>The Nation frames the landmark Meta/YouTube liability verdict</a> not just as a win for child safety advocates but as <strong>opening the floodgates for AI-related litigation</strong>. Separately, <a href='https://www.vox.com/podcasts/483724/agentic-ai-hype-cycle-reactions-alignment-problem-dangers-explained'>Vox warned that the push toward "agentic AI" is entering genuinely dangerous territory</a>, while the White House's own AI rollout is exposing internal rifts.</li><li><strong>Higher education under siege:</strong> Progressive outlets covered the <strong>Trump administration's investigations into Stanford, Ohio State, and UCSD medical schools</strong> as the latest in a systematic campaign to <a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOSnV5T2RvMm5ac2pHRjNNaWlhblRZUVBjSExlR1hiaGt2bDI3U2U2c2U5X051d1VyN3UzYTBzZjNibHlSSHY0MlNWWUZuNG84VWx2c002c1VnTk5kcS12S0E0OTlET0txQy1pOWc1UFpVcnVqTy1ySnJqSHIteXRfaDlzUQ?oc=5'>bully universities into compliance</a>. <a href='https://news.google.com/rss/articles/CBMirwFBVV95cUxQNmZpVWQxN0RDZnhJNGNqVGRITUZZU3Vuaml3WU5fdUxYTEpEdzBYN2Q0X2V3ZURzQUNjdDZBN2UzTEJtWXZjN1NJM1RxUzZVV0QtbG1ySl9kVkUzZWxFQ2pCcVFTQklZdFlYcm5Xbkx5MUpCYUhEd1lxZy1WSEJ4dnZjR0dMOTgtNmY3VGlHdUp6QVc1SG5ncWFuS3VkNUsySjZJbmR2OGZtNV9DNFI0?oc=5'>Jewish faculty at Harvard spoke out against the attacks</a>, complicating the administration's narrative that the crackdowns are about combating antisemitism. <a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXBiQU1tWGZJdEl6anJvTXk1R3B2aHQ1NlZkTjJpNkRzcUVROEprS2UzNDNZTmpMYXNUODRLODIwcHhrQ1Z5MXlKTF9kckREUldJT2g3YV9DUVBjV291U0dVcFJmb1hYVXBudXY0Q3B6Q2xveldGN0R4djRXX1pRNkQwcw?oc=5'>The Atlantic reports</a> the assault has <strong>hit legal snags</strong>, with courts blocking some funding threats.</li><li><strong>Immigration and Trump's crackdown:</strong> <a href='https://www.thenation.com/article/society/trump-immigration-international-students-tuition-illinois-chicago/'>The Nation detailed how Trump's immigration crackdown extends well beyond undocumented immigrants</a>, devastating international students and the universities that depend on their tuition — particularly in Illinois. New Jersey legislation barring local ICE contracts and mandating mask removal by agents was also a major progressive talking point.</li><li><strong>Sudan atrocities continue unseen:</strong> <a href='https://www.theguardian.com/world/2026/mar/26/sudan-drone-strikes-civilian-targets-north-darfur-market-north-kordofan-truck'>The Guardian reported that two drone strikes on civilian targets in Sudan killed 28 people</a>, hitting a market in North Darfur and a truck in North Kordofan. Progressive media continues to frame Sudan as <strong>the world's most neglected humanitarian catastrophe</strong>.</li></ul></div>
+</section>
+<div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #6b7f6b;"></div>
+        <h2>Top of the News</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="link-list">
+        <li>
+            <a href="https://www.nytimes.com/2026/03/27/business/economy/fertilizer-food-supply-iran-war.html" target="_blank">The Iran War Is Squeezing the Global Economy — From Diesel to Raspberries</a><span class="source">NYT</span>
+            <span class="desc">A constellation of NYT reporting maps the economic shockwaves of the ongoing Iran conflict. A dangerous bottleneck in global fertilizer and food supply chains is forming as the war disrupts shipping and energy markets. Diesel prices are soaring, threatening a new wave of consumer inflation, while specific grocery items — starting with raspberries — are already seeing price spikes. Oil prices continued climbing even after Trump delayed his bombing threat, underscoring market anxiety about Strait of Hormuz disruptions.</span>
+        </li>
+        <li>
+            <a href="https://www.axios.com/2026/03/27/fbi-kash-patel-iran-cyberattack" target="_blank">Iran-Linked Hackers Breach FBI Director Kash Patel&#x27;s Personal Email, Post Private Images</a><span class="source">Axios / Washington Examiner</span>
+            <span class="desc">An Iran-linked hacking group claims to have compromised FBI Director Kash Patel&#x27;s personal email, posting private photographs online. The breach marks a significant escalation in Iranian cyber operations targeting senior U.S. officials during the war and raises immediate questions about the security posture of the nation&#x27;s top law enforcement leader.</span>
+        </li>
+        <li>
+            <a href="https://www.axios.com/2026/03/27/dhs-shutdown-senate-vote-trump-tsa-ice-cbp-fema" target="_blank">Senate Votes to End DHS Shutdown, But House Conservatives Are Furious</a><span class="source">Axios / Fox News</span>
+            <span class="desc">A late-night Senate vote moved the Department of Homeland Security one step closer to restoring full funding, but House conservatives are raging against the deal, calling it insufficient. The shutdown has paralyzed TSA staffing (prompting the use of ICE agents at airports) and disrupted FEMA and CBP operations. A separate TSA funding breakthrough was also announced.</span>
+        </li>
+        <li>
+            <a href="https://www.axios.com/2026/03/27/vance-iran-peace-talks" target="_blank">Vance Takes Lead on Iran Peace Effort as Trump Steps Back from Bombing Deadline</a><span class="source">Axios</span>
+            <span class="desc">Vice President JD Vance is now leading the administration&#x27;s effort to negotiate a path out of the Iran war, described by Axios as his greatest challenge yet. Trump&#x27;s decision to delay his bombing threat bought diplomatic time, but oil markets remain deeply skeptical. The Nation argues Trump is already &#x27;losing the Iran war,&#x27; while Vox notes the constantly moving deadlines are eroding U.S. credibility.</span>
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba" target="_blank">NATO Activates First Collective Response to Suspected Deep-Sea Cable Sabotage</a><span class="source">WSJ</span>
+            <span class="desc">Suspected sabotage of an undersea communications cable has triggered the first-ever NATO-led collective response to infrastructure attacks, a landmark moment in the alliance&#x27;s evolving posture toward hybrid threats. Details on the suspected perpetrator and the specific cable were not immediately clear, but the response signals a significant hardening of NATO doctrine.</span>
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db" target="_blank">Palestinians Flood Back to Northern Gaza After Hostage Release Breakthrough</a><span class="source">WSJ</span>
+            <span class="desc">Thousands of Palestinians are streaming back to northern Gaza on foot following a breakthrough in hostage negotiations. Separately, the WSJ reports that freed Israeli hostages were found to still have shrapnel embedded in their bodies from the October 7 attack, underscoring the lasting physical toll nearly 18 months later.</span>
+        </li>
+        <li>
+            <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNTVZMbWVtOVBhMFBqYnNzaldqTjQ1SC1JYjJsSzgtTk1aRFhLb3BqcGNNd0djVjBiWk92cjRwX1RTQzRhdTFiQm14ajRZQzRZMmRfRlJnME9NenB2bE5HRUxFbEU3UFJNZkJQenlpREJkUmoxeVBWSGp2T3JUZUJZalFfTHc2cmVNWDJJdXFaSQ?oc=5" target="_blank">Trump Administration Opens Investigations Into Stanford, Ohio State, and UC San Diego Medical Schools</a><span class="source">NYT / Multiple</span>
+            <span class="desc">The Trump administration is investigating admission policies at medical schools at Stanford, Ohio State, and UC San Diego, the latest front in its escalating crackdown on higher education. The probes target diversity-related admissions practices. Jewish faculty at Harvard have separately spoken out against Trump&#x27;s broader attacks on universities, while The Atlantic reports the campaign has hit legal and institutional snags.</span>
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8" target="_blank">Rwanda-Backed Rebels Enter Major Congo Aid Hub, Deepening Crisis</a><span class="source">WSJ</span>
+            <span class="desc">M23 rebels backed by Rwanda have entered a key safe-haven city in eastern Congo that serves as a major humanitarian hub, a dramatic escalation that threatens aid operations for millions of displaced people. The advance comes despite international pressure on Kigali to rein in the group.</span>
+        </li>
+    </ul>
+</section>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #5c7a8a;"></div>
+        <h2>Must Reads</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="link-list">
+        <li>
+            <a href="https://www.theatlantic.com/politics/2026/03/kristi-noem-deportations-mullin-dhs-ice/686557/" target="_blank">Kristi Noem Is Gone. Now Mass Deportations Can Really Begin.</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.theatlantic.com/ideas/2026/03/hungary-first-post-reality-political-campaign/686565/?utm_source=feed" target="_blank">The First Post-Reality Political Campaign</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.theatlantic.com/ideas/2026/03/introspection-andreessen-thiel-bezos/686566/?utm_source=feed" target="_blank">The Very Powerful Men Who Think Introspection Is Dumb</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/2026/03/27/business/economy/fertilizer-food-supply-iran-war.html" target="_blank">Global Food Supply Faces a Dangerous Bottleneck as Iran War Persists</a><span class="source">NYT</span>
+            
+        </li>
+        <li>
+            <a href="https://www.newyorker.com/magazine/2026/04/06/mani-haghighi-movie-review" target="_blank">The Unseen Work of One of Iran&#x27;s Greatest Filmmakers</a><span class="source">The New Yorker</span>
+            
+        </li>
+        <li>
+            <a href="https://www.thenation.com/article/politics/pro-democracy-substack-echo-chamber-organizing-gap-media-critique/" target="_blank">The Bad-News Echo Chamber of Pro-Democracy Substack</a><span class="source">The Nation</span>
+            
+        </li>
+        <li>
+            <a href="https://www.theatlantic.com/international/2026/03/us-cuba-castro-trump/686568/?utm_source=feed" target="_blank">Cuba Doesn&#x27;t Care About Marxism</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/cocaine-funded-gangs-shake-colombia-years-after-peace-pact-a45a28da" target="_blank">Cocaine-Funded Gangs Shake Colombia Years After Peace Pact</a><span class="source">WSJ</span>
+            
+        </li>
+    </ul>
+</section>
+<div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #8a6f5e;"></div>
+        <h2>Local — Across the Country</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="link-list">
+        <li>
+            <a href="https://www.latimes.com/politics/story/2026-03-27/dhs-attorney-said-agents-in-los-angeles-should-have-started-hitting-protesters-emails-show" target="_blank">DHS Attorney Wrote That Agents Should Have &#x27;Started Hitting&#x27; L.A. Protesters</a><span class="source">LA Times</span>
+            <span class="desc">Internal DHS emails obtained by the LA Times reveal a department attorney urged agents to use physical force against protesters in Los Angeles. The disclosure is expected to fuel multiple legal challenges and congressional inquiries.</span>
+        </li>
+        <li>
+            <a href="https://www.seattletimes.com/nation-world/nation/arctic-sea-ice-hits-lowest-winter-level-as-unprecedented-heat-hits-smashes-records-all-over-earth/?utm_source=RSS&amp;utm_medium=Referral&amp;utm_campaign=RSS_all" target="_blank">Arctic Sea Ice Hits Lowest Winter Level Ever Recorded as Global Heat Records Shatter</a><span class="source">Seattle Times</span>
+            <span class="desc">Arctic sea ice reached its lowest-ever winter extent, as unprecedented heat continues to break records worldwide. The data marks another alarming milestone in accelerating climate change.</span>
+        </li>
+        <li>
+            <a href="https://www.latimes.com/california/story/2026-03-27/azusa-police-body-found-investigation" target="_blank">Dead Man Found Inside Police Vehicle Parked Outside Azusa PD for Days</a><span class="source">LA Times</span>
+            <span class="desc">A dead man was found inside a police vehicle that had been parked in front of the Azusa Police Department for several days. Officials have launched an investigation but provided few details.</span>
+        </li>
+        <li>
+            <a href="https://www.foxnews.com/politics/secret-service-agent-assigned-jill-biden-injured-in-negligent-discharge-philadelphia-airport" target="_blank">Secret Service Agent Assigned to Jill Biden Shoots Himself in Leg at Philadelphia Airport</a><span class="source">Fox News</span>
+            <span class="desc">A Secret Service agent on Jill Biden&#x27;s protective detail was injured in a negligent discharge at Philadelphia International Airport. Biden was being escorted through the airport at the time.</span>
+        </li>
+        <li>
+            <a href="https://www.latimes.com/california/story/2026-03-27/chavez-huerta-started-labor-revolution-now-tainted-by-scandal" target="_blank">César Chávez and Dolores Huerta&#x27;s Legacy Confronts Scandal as History Is Rewritten</a><span class="source">LA Times</span>
+            <span class="desc">A major LA Times feature examines how scandals within the farm-labor movement are reshaping the legacies of César Chávez and Dolores Huerta, even as their contributions remain central to labor history.</span>
+        </li>
+    </ul>
+</section>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #7a8b6b;"></div>
+        <h2>Maplewood &amp; New Jersey</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="link-list">
+        <li>
+            <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFB5V29obDd0cXo4X0FLTFRXaW1iZG5EcjZiVnVKck5jMmp1MnYxVUdOWG5wYmVtUktJRXdVeHhaTXRhMmxVZnhnRTdMZw?oc=5" target="_blank">Unlicensed DWI Driver Struck and Dragged Bike Bus Leader in Maplewood Hit-and-Run</a><span class="source">RLS Media / Patch / Daily Voice</span>
+            <span class="desc">A woman accused of driving without a license and under the influence struck and dragged a cyclist who leads local Bike Bus rides in Maplewood, then fled the scene. Multiple outlets are covering the story; the victim&#x27;s condition and the driver&#x27;s arrest are being widely reported across local NJ media.</span>
+        </li>
+        <li>
+            <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQNkJEWTdseGNoT3BudFAwMGVRWWs5ZHk1LTFKSHhIMVBUTlFlVXA0cFZkSjU0OTNiN3REd0NCeFllbHBDNjhaYVBZWkpzRktpR1pKcVJwM1BnWDRaeFdvcTBhX09vN2tZV1pTQWpTQXFiOHExOU8xWURFdC1KdFdIaW8wT2hNdHV2dDNlMk50SjZWNUJGVjVaZjNmeUozYUVBalBYYmhPQW1sYm1XLW5IbTBENDhtVXPSAcwBQVVfeXFMUFpMUUdDYUpzRVZLY1liSzRJZWMxTUZkb21PVWRuTUFkUG01eDV5QlVxYi1kMkM4WHZtNnZpOTVSYVB2d2JFODZrZmE3UlhMVHJoMENzZHVpV29aVVQ4Q2dha2w2Q2dNMEY5R1d1M0toV3FEYzRnb21NNG8xay1YcWdhYkJxNmtFSjBHYlM1UDN6MVhaT2M0Qlpta016N1RyZE9PdmdnZFpoSHAzNW5NZ1UzZXVoZ254OWZXRC1sLTRYeGIybmQxeEZ4cHFv?oc=5" target="_blank">Another &#x27;No Kings&#x27; Protest Planned for South Orange-Maplewood</a><span class="source">Patch / LA Times</span>
+            <span class="desc">South Orange-Maplewood residents are organizing another anti-Trump &#x27;No Kings&#x27; protest, part of a suburban resistance movement that the LA Times profiled as a growing national trend.</span>
+        </li>
+        <li>
+            <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOc3NBREFpODR2WGVPR1J1WUlUelE5NWdHRHRSVTJsUzEweHNZWUVOQ0cxZS0teDZTODZoSS0waGgzM19FaEFQdkxYMFhUejNvU1FGX1pDZmkyRWw0c2ZnUnN1RE52emdZd2ZDOUV2c3RRQV9uRzFGMXpPbUpEVzBDSHB3VzdzSEtlUk1mQWVQakpNMHc5aEJLRVZnYTAyMlk?oc=5" target="_blank">Former Maplewood Deputy Mayor Announces Run for Essex County Commission</a><span class="source">New Jersey Globe</span>
+            <span class="desc">A former Maplewood deputy mayor has announced a campaign for the Essex County Commission.</span>
+        </li>
+        <li>
+            <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFB5ZjlmTmhMVHBxQXVRWHlDMlpWa3hTcWdWUl81X0NVQnZzRjBoVXM2VGgtSWV0T2g4ZUxRMWpDU3ExMUtlNThXMHU5dlI3bDZxazROVmprZTBObnRCQlpTaUNqNjZMRzJGWmFyYUpFXzNONXJNODFZWG45UQ?oc=5" target="_blank">New Jersey Bars ICE From Wearing Masks, Becomes 10th State to Ban Local ICE Contracts</a><span class="source">NYT / Bolts / 6abc</span>
+            <span class="desc">Governor Sherrill signed legislation making New Jersey the 10th state to bar local law enforcement from entering ICE contracts and requiring federal agents to remove masks during operations — directly relevant to the immigration enforcement tensions playing out locally.</span>
+        </li>
+    </ul>
+</section>
+<div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #6b6a7a;"></div>
+        <h2>Also Noted</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="link-list">
+        <li>
+            <a href="https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863" target="_blank">Leading Chinese Property Developer Reports Huge Loss, Signaling Widening Real-Estate Crisis</a><span class="source">WSJ</span>
+            
+        </li>
+        <li>
+            <a href="https://www.axios.com/2026/03/27/sheila-cherfilus-mccormick-guilty-ethics-trial" target="_blank">Rep. Sheila Cherfilus-McCormick Found Guilty in Fiery House Ethics Trial</a><span class="source">Axios</span>
+            
+        </li>
+        <li>
+            <a href="https://www.theatlantic.com/newsletters/2026/03/melania-plato-ai-humanoid-instructor-classroom/686569/?utm_source=feed" target="_blank">A Day in Class With Plato, the Melania Trump–Mandated Robot Teacher</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.axios.com/2026/03/27/white-house-ai-rollout-rift" target="_blank">White House AI Rollout Exposes Widening Internal Rift</a><span class="source">Axios</span>
+            
+        </li>
+        <li>
+            <a href="https://www.theguardian.com/world/2026/mar/26/sudan-drone-strikes-civilian-targets-north-darfur-market-north-kordofan-truck" target="_blank">Two Drone Strikes on Civilian Targets Kill 28 in Sudan</a><span class="source">The Guardian</span>
+            
+        </li>
+        <li>
+            <a href="https://www.newyorker.com/culture/pop-music/can-bts-recapture-the-magic" target="_blank">Can BTS Recapture the Magic?</a><span class="source">The New Yorker</span>
+            
+        </li>
+    </ul>
+</section>
+</main>
+
+<footer>
+    <p>Compiled for Natalie Kitroeff</p>
+    <p>NYT &middot; WSJ &middot; Washington Post &middot; Axios &middot; The Atlantic &middot; New Yorker &middot; AP &middot; Reuters &middot; Fox &middot; Guardian &middot; Vox &middot; and more</p>
+</footer>
+
+</body>
+</html>
