@@ -139,12 +139,6 @@ def fetch_all():
         all_articles["local"].extend(items)
         print(f"    {name}: {len(items)} items")
 
-    print("  Maplewood NJ...")
-    maplewood = fetch_feed_with_timeout("Google News", MAPLEWOOD_QUERY, max_items=8)
-    nj = fetch_feed_with_timeout("Google News NJ", NJ_QUERY, max_items=6)
-    all_articles["maplewood"] = maplewood + nj
-    print(f"    Maplewood/NJ: {len(all_articles['maplewood'])} items")
-
     print("  Higher education / Trump vs. universities...")
     higher_ed = fetch_feed_with_timeout("Google News", HIGHER_ED_QUERY, max_items=8)
     all_articles["higher_ed"] = higher_ed
@@ -176,9 +170,6 @@ LEFT-LEANING SOURCES (Guardian, Vox, MSNBC, Slate, The Nation):
 
 LOCAL SOURCES (LA Times, Chicago Tribune, Houston Chronicle, Miami Herald, Boston Globe, etc.):
 {local}
-
-MAPLEWOOD NJ / NEW JERSEY:
-{maplewood}
 
 HIGHER EDUCATION / TRUMP VS. UNIVERSITIES (use these to enrich the right and left summaries):
 {higher_ed}
@@ -216,15 +207,6 @@ Return a JSON object with exactly these fields:
     }}
   ],  // 4-6 most important local stories from across the country
 
-  "maplewood": [
-    {{
-      "title": "Headline",
-      "url": "url",
-      "source": "source",
-      "description": "1-2 sentences if substantive, or just title if minor."
-    }}
-  ],  // Any actual Maplewood NJ or relevant NJ stories. Skip if nothing meaningful.
-
   "also_noted": [
     {{
       "title": "Punchy headline",
@@ -253,7 +235,6 @@ def synthesize(all_articles):
         right=format_articles(all_articles["right"]),
         left=format_articles(all_articles["left"]),
         local=format_articles(all_articles["local"]),
-        maplewood=format_articles(all_articles["maplewood"]),
         higher_ed=format_articles(all_articles.get("higher_ed", [])),
     )
 
@@ -355,13 +336,6 @@ def render_html(data):
         sections.append(dot_section(
             "Local — Across the Country", COLORS["terra"],
             story_list(data["local_stories"], show_desc=True)
-        ))
-
-    # Maplewood / NJ
-    if data.get("maplewood"):
-        sections.append(dot_section(
-            "Maplewood &amp; New Jersey", COLORS["warm_green"],
-            story_list(data["maplewood"], show_desc=True)
         ))
 
     sections.append(divider())
