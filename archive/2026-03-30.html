@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -60,6 +61,45 @@
             text-transform: uppercase;
             letter-spacing: 0.18em;
             margin-top: 0.4rem;
+        }
+        .morning-summary {
+            font-family: 'Newsreader', serif;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #2c2a25;
+            margin-bottom: 2rem;
+        }
+        .morning-summary p {
+            margin: 0;
+        }
+        .coming-list {
+            list-style: none;
+            padding: 0;
+        }
+        .coming-list li {
+            display: flex;
+            gap: 1rem;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(228,224,216,0.5);
+            align-items: baseline;
+        }
+        .coming-list li:last-child { border-bottom: none; }
+        .coming-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #7a8b6b;
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-width: 80px;
+        }
+        .coming-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #2c2a25;
+            line-height: 1.55;
         }
         section { margin-bottom: 2.2rem; }
         .section-header {
@@ -195,14 +235,44 @@
 </header>
 
 <main>
-
+<div class="morning-summary"><p>The U.S.-Iran war is rippling through every seam of American life this Monday: gas prices are approaching $4 a gallon, Houthi attacks are rattling oil markets, and a third wave of nationwide &quot;No Kings&quot; anti-war protests drew massive crowds over the weekend — with notable fractures emerging inside Trump&#x27;s own MAGA base, particularly from the manosphere. A new NYT analysis shows a U.S. &quot;precision&quot; missile struck an Iranian sports hall and school in Lamerd, raising fresh civilian-casualty questions. On the financial front, private-credit markets are showing wobbles that could become a serious political liability for the administration, while SpaceX is preparing a monster IPO that would be the largest in years. And the Trump administration&#x27;s crackdown on higher education is hitting new friction: inquiries into three medical schools&#x27; admissions policies have launched, but the broader &quot;Compact for Academic Excellence&quot; deal offered to universities was rejected by nearly all of them.</p></div>
+<section>
+    <div class="section-header">
+        <div class="section-dot" style="background: #7a8b6b;"></div>
+        <h2>Coming Up</h2>
+        <div class="section-line"></div>
+    </div>
+    <ul class="coming-list">
+        <li>
+            <span class="coming-label">This week</span>
+            <span class="coming-text">Watch for further NATO deliberations after the first-ever alliance-led response to suspected deep-sea cable sabotage — a potential escalation trigger in the Baltic. Defense ministers may convene virtually.</span>
+        </li>
+        <li>
+            <span class="coming-label">This week</span>
+            <span class="coming-text">SpaceX&#x27;s IPO filing details are expected to emerge. Axios reports it could be the largest tech IPO in over a decade, with Elon Musk&#x27;s dual role as government adviser and SpaceX CEO drawing conflict-of-interest scrutiny.</span>
+        </li>
+        <li>
+            <span class="coming-label">April elections</span>
+            <span class="coming-text">Virginia&#x27;s gerrymandering referendum in April is heating up, with both parties increasing spending. The result could reshape the state&#x27;s congressional map ahead of 2026 midterms.</span>
+        </li>
+        <li>
+            <span class="coming-label">Wednesday–Friday</span>
+            <span class="coming-text">Oil markets will be closely watched as Houthi attacks on shipping escalate. Brent crude has already spiked, and a sustained move above $90/barrel could push U.S. gas prices past the $4 threshold nationally.</span>
+        </li>
+        <li>
+            <span class="coming-label">Ongoing</span>
+            <span class="coming-text">Palestinians are streaming back to northern Gaza on foot following a hostage-release breakthrough. The fragile corridor situation could shift rapidly depending on Israeli military posture in the coming days.</span>
+        </li>
+    </ul>
+</section>
+<div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>
 <section>
     <div class="section-header">
         <div class="section-dot" style="background: #7a6b5a;"></div>
         <h2>What the Right Is Saying</h2>
         <div class="section-line"></div>
     </div>
-    <div class="synthesis"><ul><li><strong>CPAC rallies behind Trump and Iran action.</strong> A <a href='https://www.foxnews.com/politics/trump-dominates-cpac-poll-conservatives-rally-behind-agenda-back-iran-action'>Fox News/CPAC straw poll</a> shows Trump dominating conservative support, with attendees broadly endorsing military action against Iran. The base appears unified on the war, even as cracks appear elsewhere in the MAGA coalition — <a href='https://www.theatlantic.com/politics/2026/03/iran-war-trump-maga/686571/'>The Atlantic reports</a> the manosphere is turning on Trump over the conflict.</li><li><strong>Rand Paul floats 2028 presidential bid, signals anti-war lane.</strong> Sen. <strong>Rand Paul</strong> told Fox News he's <a href='https://www.foxnews.com/media/rand-paul-says-hes-50-50-running-president-2028-thinking-about-it'>'50-50' on running for president in 2028</a>, positioning himself as the libertarian, non-interventionist alternative in what could be a crowded Republican field.</li><li><strong>WSJ editorial board defends Bessent and trade policy.</strong> A <a href='https://www.wsj.com/articles/scott-bessent-can-walk-the-trade-tightrope-policy-economy-treasury-dfa140df'>WSJ Opinion piece</a> argues Treasury Secretary <strong>Scott Bessent</strong> is skillfully managing the tension between Trump's tariff agenda and market stability. Separately, the board <a href='https://www.wsj.com/articles/lumber-tariffs-and-disaster-recovery-canada-california-fires-4ec8f2e0'>warns that Trump's lumber tariffs</a> are raising costs for disaster recovery in California fire zones — a rare internal tension in conservative trade arguments.</li><li><strong>RFK Jr. called 'dangerous to public health.'</strong> The WSJ editorial board published a <a href='https://www.wsj.com/articles/rfk-jr-senate-hearing-heath-and-human-services-vaccines-trial-lawyers-ce7703cf'>sharp critique of HHS Secretary Robert F. Kennedy Jr.</a>, arguing his vaccine skepticism and ties to trial lawyers make him a genuine threat to public health outcomes — a notable attack from a right-leaning outlet on a Trump appointee.</li><li><strong>Higher education: Trump investigates medical school admissions.</strong> The Trump administration has <a href='https://news.google.com/rss/articles/CBMijwFBVV95cUxNTVZMbWVtOVBhMFBqYnNzaldqTjQ1SC1JYjJsSzgtTk1aRFhLb3BqcGNNd0djVjBiWk92cjRwX1RTQzRhdTFiQm14ajRZQzRZMmRfRlJnME9NenB2bE5HRUxFbEU3UFJNZkJQenlpREJkUmoxeVBWSGp2T3JUZUJZalFfTHc2cmVNWDJJdXFaSQ'>begun inquiries into admission policies at three medical schools</a>, probing for potential violations of the administration's anti-DEI executive orders. <strong>National Review</strong> and <strong>The Federalist</strong> have largely cheered the broader crackdown on universities, with The Federalist <a href='https://thefederalist.com/2026/03/27/47-democrats-vote-against-voter-id-after-claiming-theyd-support-it/?utm_source=rss&utm_medium=rss&utm_campaign=47-democrats-vote-against-voter-id-after-claiming-theyd-support-it'>framing Democratic opposition</a> to various Trump proposals as evidence of progressive bad faith.</li><li><strong>ICE at airports and polls.</strong> Sen. <strong>James Lankford</strong> called Democrats' demand for no ICE presence at polling places <a href='https://www.washingtonexaminer.com/news/entertainment/4508866/lankford-democrats-absurd-demand-ice-dhs/'>'absurd'</a> during DHS reform negotiations. The Federalist <a href='https://thefederalist.com/2026/03/27/americans-shouldnt-need-the-house-to-save-mass-deportations-from-weak-senate-republicans/?utm_source=rss&utm_medium=rss&utm_campaign=americans-shouldnt-need-the-house-to-save-mass-deportations-from-weak-senate-republicans'>blasted 'weak Senate Republicans'</a> for endangering the mass deportation agenda.</li></ul></div>
+    <div class="synthesis"><ul><li><strong>North Korean weapons fueling Iran's war effort:</strong> <a href='https://www.foxnews.com/world/irans-war-against-us-israel-being-fueled-north-korean-weapons-expert-warns'>Fox News highlights</a> expert warnings that North Korean munitions and missile technology are playing a significant role in Iran's military operations against U.S. and Israeli forces. The piece frames the conflict as part of a broader axis of adversaries — Iran, Russia, North Korea — cooperating against American interests, and argues this validates a hawkish posture.</li><li><strong>Tom Homan pushes back on DHS criticism:</strong> Homan appeared on CBS and <a href='https://www.foxnews.com/media/homan-fires-back-cbs-host-dhs-shutdown-blame-points-democrats-culprit'>fired back at the host</a> who pressed him on the government shutdown's impact on DHS operations, insisting Democrats bear responsibility. Separately, <a href='https://www.washingtonexaminer.com/news/4509036/tom-homan-defends-ice-wearing-masks-stop-calling-ice-nazis-and-racists/'>the Washington Examiner reports</a> Homan defended ICE agents wearing masks during raids, saying: <strong>"Stop calling ICE Nazis and racists."</strong></li><li><strong>Newt Gingrich warns Democrats face a 2026 reckoning:</strong> In a <a href='https://www.foxnews.com/opinion/newt-gingrich-democrats-could-get-alarming-wake-up-call-2026-election'>Fox News op-ed</a>, Gingrich argues that Democratic overreach on cultural issues and obstruction of Trump's agenda will backfire in the midterms. He contends the anti-war protests are out of step with mainstream voters who support a strong response to Iran.</li><li><strong>WSJ Opinion defends Bessent, attacks RFK Jr.:</strong> The <a href='https://www.wsj.com/articles/scott-bessent-can-walk-the-trade-tightrope-policy-economy-treasury-dfa140df'>WSJ editorial board backs Treasury Secretary Scott Bessent</a>, arguing he can navigate tariff policy without crashing markets. But in a separate piece, they publish a <a href='https://www.wsj.com/articles/rfk-jr-senate-hearing-heath-and-human-services-vaccines-trial-lawyers-ce7703cf'>sharp critique of RFK Jr.</a>, calling him <strong>"dangerous to public health"</strong> and warning that his HHS tenure threatens vaccine confidence and empowers trial lawyers.</li><li><strong>47 Democrats voted against voter ID:</strong> <a href='https://thefederalist.com/2026/03/27/47-democrats-vote-against-voter-id-after-claiming-theyd-support-it/'>The Federalist reports</a> that <strong>47 House Democrats voted against the SAVE America Act's voter ID provisions</strong> despite previously claiming support for the concept, framing it as evidence of Democratic hypocrisy on election integrity.</li><li><strong>Trump's higher-education crackdown — medical school inquiries:</strong> The Trump administration has <strong>begun formal inquiries into admissions policies at three medical schools</strong>, investigating whether race-conscious practices persist in violation of the Supreme Court's affirmative action ruling. <a href='https://news.google.com/rss/articles/CBMijwFBVV95cUxNTVZMbWVtOVBhMFBqYnNzaldqTjQ1SC1JYjJsSzgtTk1aRFhLb3BqcGNNd0djVjBiWk92cjRwX1RTQzRhdTFiQm14ajRZQzRZMmRfRlJnME9NenB2bE5HRUxFbEU3UFJNZkJQenlpREJkUmoxeVBWSGp2T3JUZUJZalFfTHc2cmVNWDJJdXFaSQ?oc=5'>The NYT reports</a> the inquiries are seen as a show of federal power, while conservative outlets applaud the move as necessary enforcement. Meanwhile, <a href='https://news.google.com/rss/articles/CBMikgFBVV95cUxOTG5SRkg1aU84d1c1clpBQ3VXVkx6bWdTUXBJMFJhVWE4RF9CcXp6T21nWFh2aWQ1dkZsSWhmRERaT1gzakZmWEZIWUJmRVFTRGtNT2hGZkRwVm5JVEVCVU5jcjV6cEdQck5Sd1AyM0hVdlB4ZHQ4dFZablhZcmdlQXRyMnpPNUxFZFJLNF9QRVhwQdIBlwFBVV95cUxQX3UxT2EtNG5sZWVSSlo3VTUxNmVOeWdYaDRDaGlpbzMySXJfaWNBdzA0S1NVNnk1Nk1RdDFFUkhFR3JnbXJGS0c5Vk83M05iZ1RCUjhMS2h5aUd0STkwZ0JfX2FBOFp3aUpHX2t4TkJLYTFnaE0xN3ByOGFEaEFnUGVuMHdXTWZjc2N2NGZURjFOLTZSVDFr?oc=5'>The Hill notes</a> fears that demands for race-based admissions data could lead to <strong>retaliation against institutions</strong> that resist.</li><li><strong>Virginia gerrymandering referendum tightens:</strong> <a href='https://thefederalist.com/2026/03/27/cocky-virginia-dems-starting-to-sweat-over-aprils-referendum-on-rigged-political-maps/'>The Federalist argues</a> Virginia Democrats are "starting to sweat" as April's redistricting referendum appears more competitive than expected, calling current maps <strong>"rigged"</strong> in Democrats' favor.</li></ul></div>
 </section>
 <section>
     <div class="section-header">
@@ -210,78 +280,94 @@
         <h2>What the Left Is Saying</h2>
         <div class="section-line"></div>
     </div>
-    <div class="synthesis"><ul><li><strong>'Even John Bolton is against this war.'</strong> Progressive media is almost uniformly opposed to the Iran escalation. <a href='https://www.vox.com/podcasts/484166/iran-war-trump-john-bolton-regime-change'>Vox highlights</a> that even <strong>John Bolton</strong> — the arch-hawk — has criticized Trump's Iran campaign, arguing it lacks strategic coherence. <a href='https://www.thenation.com/article/politics/no-kings-anti-war-movement-iran/'>The Nation declares</a> 'the politicians won't stop this war — only the people can,' framing the 'No Kings' protests as the locus of anti-war energy.</li><li><strong>The religious right fractures over Israel and Iran.</strong> <a href='https://www.vox.com/politics/484125/israel-maga-iran-religious-catholic-evangelical-zionism-dispensationalism-vatican-anti-semitism-tucker-huckabee-ted-cruz'>Vox reports</a> a significant split within the religious right, with <strong>Catholic conservatives and some evangelicals</strong> breaking from the reflexive pro-Israel, pro-war consensus. The piece traces the theological roots of the divide — dispensationalist Zionism vs. Catholic just-war tradition — and names <strong>Tucker Carlson</strong> and <strong>Ambassador Mike Huckabee</strong> as figures on opposite sides.</li><li><strong>TSA meltdown and the failing state.</strong> <a href='https://www.newyorker.com/magazine/2026/04/06/what-was-behind-the-tsa-meltdown'>The New Yorker's investigation</a> into the TSA crisis traces it to cascading budget cuts, DOGE-adjacent staffing mandates, and political indifference. <a href='https://www.thenation.com/article/politics/newsletter-laguardia-tsa-baseball/'>The Nation's Elie Mystal</a> argues bluntly that <strong>'nothing works in Trump's America — except racism,'</strong> connecting airport chaos, ICE deployments, and the administration's priorities.</li><li><strong>Cuba: the human cost of the blockade.</strong> <a href='https://www.theguardian.com/us-news/2026/mar/29/us-russian-oil-tanker-cuba-blockade'>The Guardian</a> emphasizes the humanitarian framing of the Cuba blockade story, while progressive outlets point to <a href='https://www.nytimes.com/2026/03/26/world/americas/cubas-health-system-us-oil-blockade.html'>NYT reporting</a> that <strong>Cuban patients are dying</strong> because hospitals cannot run generators or refrigerate medicine. The decision to allow one Russian tanker through is framed as too little, too late.</li><li><strong>Higher education under siege.</strong> Progressive outlets are alarmed by <strong>Trump's expanding crackdown on universities</strong>. <a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxOcnIwbmhvWkVFUjY4eXIycWNwVEl1RXBPTnVHX2lIRGRGbnQ4NmhjUm9mX1JrR01ldEtDa08yTks5TzVhaWZ5QUNUZlBmUDl6QVVhRXQ0eE8tRTQtcy1ISkh5M2o4STVxMFhzSnNtejNobTgycnpCblp1RlJNdGtBSkNmd1l1RlYtODB0Z2FTZlpoNW5hZEE?oc=5'>Times Higher Education</a> reports the Education Department is 'not dead but being dismantled.' <a href='https://news.google.com/rss/articles/CBMirwFBVV95cUxQNmZpVWQxN0RDZnhJNGNqVGRITUZZU3Vuaml3WU5fdUxYTEpEdzBYN2Q0X2V3ZURzQUNjdDZBN2UzTEJtWXZjN1NJM1RxUzZVV0QtbG1ySl9kVkUzZWxFQ2pCcVFTQklZdFlYcm5Xbkx5MUpCYUhEd1lxZy1WSEJ4dnZjZ0dMOTgtNmY3VGlHdUp6QVc1SG5ncWFuS3VkNUsySjZJbmR2OGZtNV9DNFI0?oc=5'>Jewish faculty at Harvard have spoken out</a> against Trump's attacks, and a <a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxNMnFSNUpOcWhrSzhlZ0ZfRkxQblQ1aG5LenJxNGdFTTV6ckZRQUsxcU9sNnhDbEZIMHNmYklTcFVCUmZWTC1GUzNRMjYwSzYwYjFheHBuXzRQYWZBaWViTU0wcUhoZlNQTnNQUjkwcER6UlBNUDRwSkhHZTFoeWZKRGpSSi1GZ1ZrZ1RzSVhIeF9lMFNFRl81djVha09XV1ppN1dkNzVoNDBra3JZcnc?oc=5'>multi-state lawsuit</a> argues Trump's college data mandate threatens student privacy. <a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXBiQU1tWGZJdEl6anJvTXk1R3B2aHQ1NlZkTjJpNkRzcUVROEprS2UzNDNZTmpMYXNUODRLODIwcHhrQ1Z5MXlKTF9kckREUldJT2g3YV9DUVBjV291U0dVcFJmb1hYVXBudXY0Q3B6Q2xveldGN0R4djRXX1pRNkQwcw?oc=5'>The Atlantic notes</a> that <strong>Trump's assault on higher education has 'hit a snag'</strong> — almost all universities rejected his restrictive 'Compact for Academic Excellence.'</li><li><strong>Courts crack down on Big Tech's harm to children.</strong> <a href='https://www.vox.com/politics/484228/meta-instagram-youtube-verdict-social-media-free-speech'>Vox reports</a> that courts are finally issuing rulings punishing <strong>Meta and Google</strong> for harms to minors, but warns the legal victories could create free-speech complications. A separate <a href='https://www.foxnews.com/media/ruling-against-meta-google-could-set-stage-changes-handling-hate-content'>ruling on hate content</a> could set broader precedent for platform liability.</li></ul></div>
+    <div class="synthesis"><ul><li><strong>"No Kings! No Wars!" — the anti-war movement builds:</strong> <a href='https://www.thenation.com/article/activism/no-kings-protest-iran/'>The Nation provides extensive coverage</a> of the third nationwide "No Kings" protest, framing it as the most significant anti-war mobilization since Iraq. A companion piece argues <a href='https://www.thenation.com/article/politics/no-kings-anti-war-movement-iran/'>"the politicians won't stop this war — only the people can,"</a> calling on grassroots movements to escalate pressure. <a href='https://www.theatlantic.com/photography/2026/03/photos-from-the-third-nationwide-no-kings-protest/686609/?utm_source=feed'>The Atlantic published striking photo essays</a> from rallies across the country.</li><li><strong>ICE enforcement is transforming American life:</strong> <a href='https://www.vox.com/politics/483983/immigration-ice-changed-america-economy-tsa-chicago-charlotte-arizona-enforcement-immigrant-life'>Vox's sweeping investigation</a> documents how expanded ICE operations have created a climate of fear in immigrant communities, disrupted local economies, and fundamentally altered daily routines in cities like <strong>Chicago, Charlotte, and Phoenix</strong>. The piece details workplace raids, school enrollment drops, and the economic ripple effects of mass deportation campaigns.</li><li><strong>"Nothing works in Trump's America — except racism":</strong> <a href='https://www.thenation.com/article/politics/newsletter-laguardia-tsa-baseball/'>The Nation's Elie Mystal writes</a> a blistering assessment of governance failures under Trump, arguing that administrative dysfunction — from TSA lines to federal services — is the actual product of an administration focused on racial grievance rather than competence.</li><li><strong>Consumer pain is compounding:</strong> <a href='https://www.axios.com/2026/03/28/iran-war-inflation-costs'>Axios frames</a> Americans as caught in a <strong>"triple stack of pain"</strong> — war-driven oil price spikes, ongoing tariff costs, and elevated interest rates — creating a squeeze on household budgets that progressive commentators argue disproportionately hits working families.</li><li><strong>Higher education under siege:</strong> Progressive outlets are alarmed by the administration's escalating university crackdown. <a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxOcnIwbmhvWkVFUjY4eXIycWNwVEl1RXBPTnVHX2lIRGRGbnQ4NmhjUm9mX1JrR01ldEtDa08yTks5TzVhaWZ5QUNUZlBmUDl6QVVhRXQ0eE8tRTQtcy1ISkh5M2o4STVxMFhzSnNtejNobTgycnpCblp1RlJNdGtBSkNmd1l1RlYtODB0Z2FTZlpoNW5hZEE?oc=5'>Times Higher Education reports</a> the Education Department is <strong>"not dead but being dismantled"</strong> piece by piece. <a href='https://news.google.com/rss/articles/CBMirgFBVV95cUxNMnFSNUpOcWhrSzhlZ0ZfRkxQblQ1aG5LenJxNGdFTTV6ckZRQUsxcU9sNnhDbEZIMHNmYklTcFVCUmZWTC1GUzNRMjYwSzYwYjFheHBuXzRQYWZBaWViTU0wcUhoZlNQTnNQUjkwcER6UlBNUDRwSkhHZTFoeWZKRGpSSi1GZ1ZrZ1RzSVhIeF9lMFNFRl81djVha09XV1ppN1dkNzVoNDBra3JZcnc?oc=5'>A multi-state lawsuit argues</a> Trump's college data mandate <strong>threatens student privacy</strong>. But <a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXBiQU1tWGZJdEl6anJvTXk1R3B2aHQ1NlZkTjJpNkRzcUVROEprS2UzNDNZTmpMYXNUODRLODIwcHhrQ1Z5MXlKTF9kckREUldJT2g3YV9DUVBjV291U0dVcFJmb1hYVXBudXY0Q3B6Q2xveldGN0R4djRXX1pRNkQwcw?oc=5'>The Atlantic argues</a> the assault has "hit a snag" — <strong>nearly all universities rejected Trump's restrictive "Compact for Academic Excellence,"</strong> showing institutional resistance is holding, at least for now.</li><li><strong>Vox on Trump's redesign of Washington itself:</strong> <a href='https://www.vox.com/podcasts/483989/trump-washington-dc-redesign-east-wing-kennedy-center'>A Vox podcast explores</a> how Trump is physically reshaping Washington, D.C., from the East Wing to the Kennedy Center, arguing the aesthetic and architectural changes carry ideological significance about the nature of executive power.</li></ul></div>
 </section>
 <div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>
 <section>
     <div class="section-header">
         <div class="section-dot" style="background: #6b7f6b;"></div>
-        <h2>Iran War & Middle East</h2>
+        <h2>Iran War & Its Fallout</h2>
         <div class="section-line"></div>
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.nytimes.com/2026/03/29/us/politics/trump-special-operations-forces-iran.html" target="_blank">Trump Deploys Special Operations Forces to Middle East as Iran Escalation Deepens</a><span class="source">NYT</span>
-            <span class="desc">The U.S. has sent special operations forces to the Middle East as President Trump weighs his next military move against Iran. The deployment coincides with rising Houthi attacks on shipping and Israeli targets, which are pushing oil prices higher. Pakistan has offered to host U.S.-Iran peace talks, even as Tehran vows to set invading troops &#x27;on fire.&#x27;</span>
+            <a href="https://www.nytimes.com/2026/03/29/world/middleeast/us-precision-strike-missile-iran-lamerd.html" target="_blank">NYT analysis: U.S. &#x27;precision&#x27; missile hit an Iranian sports hall and school</a><span class="source">NYT</span>
+            <span class="desc">Open-source analysis and satellite imagery show a new U.S. missile struck a sports hall and school complex in Lamerd, Iran, contradicting Pentagon claims of exclusively military targeting. The findings are likely to intensify congressional demands for strike assessments and fuel international criticism.</span>
         </li>
         <li>
-            <a href="https://www.theatlantic.com/international/2026/03/kurdish-troops-us-iran-war/686572/" target="_blank">Kurdish Ground Forces Prepare for Combat Role in Iran Campaign</a><span class="source">The Atlantic</span>
-            <span class="desc">The Atlantic reports on Kurdish forces — long-standing U.S. partners in the region — now preparing for a potential ground role in an Iran conflict. The piece details training, staging areas, and the complicated politics of relying on a stateless ethnic militia as a proxy force against a sovereign nation.</span>
+            <a href="https://www.nytimes.com/2026/03/30/podcasts/the-headlines/iran-war-gas-prices-anti-trump-protest.html" target="_blank">Gas prices near $4/gallon as Houthi attacks rattle oil markets and protests sweep the nation</a><span class="source">NYT</span>
+            <span class="desc">The war&#x27;s economic blowback is now visceral for consumers: gas prices are approaching $4 a gallon nationally, Houthi strikes on Red Sea shipping are pushing oil higher, and a third round of &#x27;No Kings&#x27; anti-war rallies drew large turnout in cities across the country. Axios reports consumers face a &#x27;triple stack of pain&#x27; from war-driven inflation, tariffs, and rising interest rates.</span>
         </li>
         <li>
-            <a href="https://www.washingtonexaminer.com/news/world/4508931/iranian-heavy-water-plant-offline-iaea/" target="_blank">IAEA Confirms Key Iranian Heavy Water Plant Offline After Israeli Strike</a><span class="source">Washington Examiner</span>
-            <span class="desc">The IAEA confirmed that an Iranian heavy water production plant has gone offline following an IDF strike, a significant blow to Iran&#x27;s nuclear infrastructure. Iran has responded by threatening to bomb U.S. and Israeli universities in the Middle East, escalating the rhetoric even as diplomatic channels through Pakistan remain nominally open.</span>
+            <a href="https://www.theatlantic.com/politics/2026/03/iran-war-trump-maga/686571/" target="_blank">The manosphere turns on Trump over the Iran war</a><span class="source">The Atlantic</span>
+            <span class="desc">In a significant political development, influential male-oriented online communities that were a key part of Trump&#x27;s 2024 coalition are breaking with the president over the Iran conflict. The piece documents how anti-interventionist sentiment in the manosphere is creating a rare right-flank vulnerability for the administration.</span>
+        </li>
+        <li>
+            <a href="https://www.theatlantic.com/international/2026/03/kurdish-troops-us-iran-war/686572/" target="_blank">Kurdish ground forces prepare to fight alongside the U.S. in Iran</a><span class="source">The Atlantic</span>
+            <span class="desc">The Atlantic reports on Kurdish paramilitary formations positioning to serve as a U.S. ground proxy in Iran, echoing the model used against ISIS. The development raises questions about post-conflict commitments and the risk of a broader regional conflagration.</span>
         </li>
     </ul>
 </section>
 <section>
     <div class="section-header">
         <div class="section-dot" style="background: #5c7a8a;"></div>
-        <h2>Cuba Crisis & U.S. Blockade</h2>
+        <h2>Economy & Markets</h2>
         <div class="section-line"></div>
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.nytimes.com/2026/03/29/world/americas/cuba-russian-oil-tanlker.html" target="_blank">U.S. Will Allow a Russian Oil Tanker to Reach Cuba, Breaking Its Own Blockade</a><span class="source">NYT</span>
-            <span class="desc">The Trump administration has decided to let a Russian tanker deliver oil to Cuba, the first crack in a U.S. blockade that has crippled the island&#x27;s energy supply. The decision comes amid reports of patients dying in Cuban hospitals due to fuel shortages for generators and medical equipment. The move is a rare concession, though the broader blockade policy remains in place.</span>
+            <a href="https://www.nytimes.com/2026/03/30/business/private-credit-risks-trump-administration.html" target="_blank">Private-credit wobbles could become a serious political problem for Trump</a><span class="source">NYT</span>
+            <span class="desc">The $1.7 trillion private-credit market — which boomed under light regulation — is showing signs of stress as war-driven uncertainty and rising rates squeeze borrowers. The NYT argues that a crack-up in this opaque market could cascade into the broader economy and become a defining economic crisis for Trump&#x27;s second term.</span>
         </li>
         <li>
-            <a href="https://www.nytimes.com/2026/03/28/world/americas/castro-family-cuba-energy-crisis-trump.html" target="_blank">Castro Heirs Resurface in Cuban Politics as Energy Crisis and U.S. Pressure Converge</a><span class="source">NYT</span>
-            <span class="desc">Members of the Castro family are re-emerging across Cuba&#x27;s political landscape as the country faces its worst energy crisis in decades. The dynamic creates a complex political picture: a desperate population, a revived revolutionary dynasty, and a Trump administration wielding maximum pressure.</span>
+            <a href="https://www.axios.com/2026/03/30/spacex-ipo-elon-musk-wall-street" target="_blank">SpaceX&#x27;s monster IPO could be the largest in years — with massive conflict-of-interest questions</a><span class="source">Axios</span>
+            <span class="desc">SpaceX is reportedly preparing an IPO that could value the company well above $200 billion, making it the biggest tech listing in over a decade. Musk&#x27;s simultaneous role as a senior government adviser raises unprecedented ethics questions about insider access and government contracts.</span>
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863" target="_blank">China&#x27;s property crisis deepens as a leading developer reports massive losses</a><span class="source">WSJ</span>
+            <span class="desc">A major Chinese property developer — previously seen as one of the sector&#x27;s survivors — has reported enormous losses, signaling the real-estate crisis is widening beyond the weakest players and threatening broader economic stability in China.</span>
         </li>
     </ul>
 </section>
 <section>
     <div class="section-header">
         <div class="section-dot" style="background: #8a6f5e;"></div>
-        <h2>Economy & Consumer Pain</h2>
+        <h2>Homeland Security & Immigration</h2>
         <div class="section-line"></div>
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.nytimes.com/2026/03/29/us/gas-prices-spring-break-vacation.html" target="_blank">Gas Prices Near $4 a Gallon as Iran Conflict, Tariffs, and Inflation Stack Up</a><span class="source">NYT</span>
-            <span class="desc">U.S. gas prices are approaching $4 a gallon heading into spring break, driven by the Iran conflict disrupting oil markets and Houthi attacks on shipping lanes. Americans are canceling or downgrading vacation plans. Axios frames this as a &#x27;triple stack of pain&#x27; — war-driven energy costs, tariff-related price increases, and persistent inflation hitting consumers simultaneously.</span>
+            <a href="https://www.nytimes.com/2026/03/30/us/politics/markwayne-mullin-new-era-homeland-security.html" target="_blank">Markwayne Mullin takes over DHS: less flash, same hardline mission</a><span class="source">NYT</span>
+            <span class="desc">Former Sen. Markwayne Mullin is now running the Department of Homeland Security, replacing a more theatrical predecessor. The NYT profiles his management style as quieter but no less aggressive on immigration enforcement, deportation operations, and border policy.</span>
         </li>
         <li>
-            <a href="https://www.wsj.com/articles/even-chinas-property-stalwart-isnt-immune-from-the-crisis-19799863" target="_blank">China&#x27;s Property Woes Widen as Major Developer Reports Massive Loss</a><span class="source">WSJ</span>
-            <span class="desc">Even China&#x27;s most resilient property developers are now posting enormous losses, signaling the real estate crisis is deepening rather than stabilizing. The report raises concerns about broader contagion in China&#x27;s financial system and potential knock-on effects for global growth at an already fragile moment.</span>
+            <a href="https://www.vox.com/politics/483983/immigration-ice-changed-america-economy-tsa-chicago-charlotte-arizona-enforcement-immigrant-life" target="_blank">How ICE has changed American life</a><span class="source">Vox</span>
+            <span class="desc">A sweeping Vox investigation documents how expanded ICE enforcement has reshaped daily life in cities like Chicago, Charlotte, and across Arizona — affecting workplaces, schools, and even TSA interactions. The piece quantifies the economic and social costs of the deportation push.</span>
         </li>
     </ul>
 </section>
 <section>
     <div class="section-header">
         <div class="section-dot" style="background: #9a7b6b;"></div>
-        <h2>Immigration & Domestic Security</h2>
+        <h2>International</h2>
         <div class="section-line"></div>
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.nytimes.com/2026/03/29/us/politics/ice-tsa-airports-homan-trump-shutdown.html" target="_blank">Border Czar Homan Says ICE May Stay at Airports Permanently, Even After Shutdown Ends</a><span class="source">NYT</span>
-            <span class="desc">Tom Homan indicated that ICE agents deployed to airports during the TSA pay disruption may remain there as a permanent fixture, even after TSA staffing normalizes. The New Yorker has a deep investigation into the causes of the TSA meltdown, while The Nation calls it evidence that &#x27;nothing works in Trump&#x27;s America — except racism.&#x27;</span>
+            <a href="https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db" target="_blank">Palestinians stream back to northern Gaza on foot after hostage breakthrough</a><span class="source">WSJ</span>
+            <span class="desc">Thousands of displaced Palestinians are walking back to northern Gaza following a hostage-release deal. The WSJ reports on chaotic scenes as families return to devastated neighborhoods, with aid organizations warning of massive unmet needs.</span>
         </li>
         <li>
-            <a href="https://www.theatlantic.com/photography/2026/03/photos-from-the-third-nationwide-no-kings-protest/686609/?utm_source=feed" target="_blank">Third Nationwide &#x27;No Kings&#x27; Protest Draws Large Crowds, Debuts Rewritten Anthem</a><span class="source">The Atlantic</span>
-            <span class="desc">The third iteration of the &#x27;No Kings&#x27; protests drew demonstrators across the country over the weekend, with organizers debuting a rewritten verse of &#x27;America the Beautiful&#x27; referencing immigrants. The protests are increasingly merging anti-war and anti-deportation themes. Fox News focused on the anthem rewrite; The Nation championed the movement as the only force capable of stopping the Iran war.</span>
+            <a href="https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba" target="_blank">Suspected deep-sea cable sabotage triggers first-ever NATO-led military response</a><span class="source">WSJ</span>
+            <span class="desc">NATO has activated its first coordinated military response to suspected sabotage of undersea communications infrastructure, likely by Russia-linked actors. The move marks a significant escalation in the alliance&#x27;s posture toward hybrid threats.</span>
+        </li>
+        <li>
+            <a href="https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8" target="_blank">Rwanda-backed rebels enter Congo&#x27;s safe-haven city, threatening aid hub</a><span class="source">WSJ</span>
+            <span class="desc">M23 rebels supported by Rwanda have entered a Congolese city that served as a major humanitarian hub, putting hundreds of thousands of displaced civilians at risk and drawing sharp international condemnation.</span>
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/2026/03/29/world/americas/cuba-russian-oil-tanlker.html" target="_blank">U.S. allows Russian oil tanker to reach Cuba despite blockade</a><span class="source">NYT</span>
+            <span class="desc">In a notable exception to its de facto energy blockade of Cuba, the Trump administration permitted a Russian oil tanker to dock and deliver fuel. The decision suggests a pragmatic calculation to avoid a full humanitarian collapse on the island, even as broader sanctions remain in force.</span>
         </li>
     </ul>
 </section>
@@ -293,12 +379,12 @@
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.axios.com/2026/03/29/claude-mythos-anthropic-cyberattack-ai-agents" target="_blank">Anthropic&#x27;s Claude Mythos Raises Alarms as a Potential Cyberattack Weapon</a><span class="source">Axios</span>
-            <span class="desc">Security researchers are warning that the latest generation of AI models — including Anthropic&#x27;s Claude Mythos — are sophisticated enough to serve as potent hacking tools, capable of autonomously discovering and exploiting software vulnerabilities. The concern marks a shift from theoretical AI risk to concrete, near-term cybersecurity threats.</span>
+            <a href="https://www.nytimes.com/2026/03/29/business/trump-artificial-intelligence-pac-midterms.html" target="_blank">New pro-Trump PAC formed to push AI deregulation agenda in 2026 midterms</a><span class="source">NYT</span>
+            <span class="desc">A new political action committee backed by major tech donors is organizing to support candidates who embrace Trump&#x27;s AI-friendly, deregulatory agenda in the midterms. The group aims to make AI policy a wedge issue, targeting Democrats who favor safety regulations.</span>
         </li>
         <li>
-            <a href="https://www.axios.com/2026/03/28/openai-erotica-chatgpt-ipo" target="_blank">OpenAI Pivots Hard Toward Revenue, Raising Questions About Its Mission</a><span class="source">Axios</span>
-            <span class="desc">OpenAI is narrowing its focus to money-making products — including allowing adult content on ChatGPT — as it prepares for a potential IPO. Vox calls this &#x27;the contradiction at the heart of OpenAI,&#x27; questioning whether a company founded on safety-first principles can survive a profit-driven transformation.</span>
+            <a href="https://www.axios.com/2026/03/29/claude-mythos-anthropic-cyberattack-ai-agents" target="_blank">Anthropic&#x27;s Claude Mythos model raises fears of AI-powered cyberattacks</a><span class="source">Axios</span>
+            <span class="desc">Security researchers are sounding alarms that Anthropic&#x27;s newest Claude Mythos model and similar AI agents could dramatically lower the barrier for sophisticated cyberattacks. The concerns span autonomous hacking, social engineering, and exploit generation.</span>
         </li>
     </ul>
 </section>
@@ -310,7 +396,7 @@
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.newyorker.com/magazine/2026/04/06/what-was-behind-the-tsa-meltdown" target="_blank">What Was Behind the T.S.A. Meltdown?</a><span class="source">The New Yorker</span>
+            <a href="https://www.theatlantic.com/politics/2026/03/iran-war-trump-maga/686571/" target="_blank">The Manosphere Turns on Trump</a><span class="source">The Atlantic</span>
             
         </li>
         <li>
@@ -318,23 +404,23 @@
             
         </li>
         <li>
-            <a href="https://www.theatlantic.com/politics/2026/03/iran-war-trump-maga/686571/" target="_blank">The Manosphere Turns on Trump</a><span class="source">The Atlantic</span>
+            <a href="https://www.newyorker.com/magazine/2026/04/06/at-synagogues-tensions-are-boiling-over" target="_blank">At Beth El, a New Jersey Synagogue, a Deep Divide Over Israel</a><span class="source">The New Yorker</span>
             
         </li>
         <li>
-            <a href="https://www.vox.com/politics/484125/israel-maga-iran-religious-catholic-evangelical-zionism-dispensationalism-vatican-anti-semitism-tucker-huckabee-ted-cruz" target="_blank">The Religious Right Is Breaking Up Over Israel and Iran</a><span class="source">Vox</span>
+            <a href="https://www.newyorker.com/magazine/2026/04/06/the-camps-promising-to-turn-you-or-your-son-into-an-alpha-male" target="_blank">The Camps Promising to Turn You — or Your Son — Into an Alpha Male</a><span class="source">The New Yorker</span>
             
         </li>
         <li>
-            <a href="https://www.newyorker.com/culture/the-weekend-essay/my-childhood-in-the-weather-underground" target="_blank">My Childhood in the Weather Underground</a><span class="source">The New Yorker</span>
-            
-        </li>
-        <li>
-            <a href="https://www.nytimes.com/2026/03/26/world/americas/cubas-health-system-us-oil-blockade.html" target="_blank">Cuban Patients Are Dying Because of U.S. Blockade, Doctors Say</a><span class="source">NYT</span>
+            <a href="https://www.vox.com/politics/483983/immigration-ice-changed-america-economy-tsa-chicago-charlotte-arizona-enforcement-immigrant-life" target="_blank">How ICE Has Changed American Life</a><span class="source">Vox</span>
             
         </li>
         <li>
             <a href="https://www.theatlantic.com/ideas/2026/03/introspection-knowing-yourself/686602/?utm_source=feed" target="_blank">Marc Andreessen&#x27;s Mistake</a><span class="source">The Atlantic</span>
+            
+        </li>
+        <li>
+            <a href="https://www.nytimes.com/2026/03/30/business/private-credit-risks-trump-administration.html" target="_blank">Private-Credit Wobbles Could Prove Perilous for Trump</a><span class="source">NYT</span>
             
         </li>
         <li>
@@ -352,20 +438,20 @@
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.latimes.com/california/story/2026-03-29/marine-accused-of-stealing-selling-weapons-from-camp-pendleton" target="_blank">Marine Corporal Accused of Stealing, Reselling Weapons and Ammo from Camp Pendleton</a><span class="source">LA Times</span>
-            <span class="desc">A Marine corporal stationed at Camp Pendleton has been charged with stealing military weapons and ammunition and reselling them, raising concerns about base security and illegal arms trafficking.</span>
+            <a href="https://www.latimes.com/california/story/2026-03-30/next-to-joshua-tree-national-park-mining-company-is-staking-claim" target="_blank">Next to Joshua Tree National Park, a mining company stakes its claim for rare earth minerals</a><span class="source">LA Times</span>
+            <span class="desc">A mining company is moving to extract rare earth minerals adjacent to Joshua Tree National Park, raising alarm from conservationists and testing the Trump administration&#x27;s push to boost domestic critical-mineral production.</span>
         </li>
         <li>
-            <a href="https://www.latimes.com/california/story/2026-03-29/la-county-sheriffs-deputy-death-baker-to-vegas" target="_blank">L.A. County Sheriff&#x27;s Deputy Dies During Baker to Vegas Relay Race</a><span class="source">LA Times</span>
-            <span class="desc">An L.A. County sheriff&#x27;s deputy died during the annual Baker to Vegas relay race, a grueling desert endurance event popular with law enforcement agencies across the country.</span>
+            <a href="https://www.latimes.com/science/story/2026-03-30/socal-native-set-to-be-first-black-person-to-reach-moon" target="_blank">A SoCal native is set to pilot NASA&#x27;s lunar mission — and become the first Black person to reach the moon</a><span class="source">LA Times</span>
+            <span class="desc">A Southern California native has been selected to pilot NASA&#x27;s upcoming Artemis lunar mission, positioning him to become the first Black astronaut to reach the moon.</span>
         </li>
         <li>
-            <a href="https://www.dallasnews.com/sports/college-sports/2026/03/29/march-madness-final-four-uconn-duke-braylon-mullins-illinois-arizona-michigan/" target="_blank">Final Four Set: UConn Stuns Duke to Join Illinois, Arizona, Michigan</a><span class="source">Dallas Morning News</span>
-            <span class="desc">UConn pulled off a stunner over Duke to complete the Final Four field. Illinois, Arizona, and Michigan also advanced. The semifinal matchups are set for this weekend.</span>
+            <a href="https://www.latimes.com/california/story/2026-03-30/speeders-beware-125-traffic-cameras-are-coming-to-l-a-along-with-hefty-fines-what-you-need-to-know" target="_blank">125 traffic cameras are coming to L.A., with hefty fines for speeders</a><span class="source">LA Times</span>
+            <span class="desc">Los Angeles is rolling out 125 automated speed cameras across the city, part of a broader Vision Zero effort. Fines could reach hundreds of dollars per violation.</span>
         </li>
         <li>
-            <a href="https://www.latimes.com/california/story/2026-03-29/police-say-road-rage-in-newport-beach-bike-lane-leads-to-arrest" target="_blank">Road Rage in Newport Beach Bike Lane Leads to Arrest, BMW Seized</a><span class="source">LA Times</span>
-            <span class="desc">A road rage incident in a Newport Beach bike lane led to one arrest and the seizure of a BMW, the latest in a series of cyclist-driver confrontations in Southern California.</span>
+            <a href="https://www.dallasnews.com/opinion/commentary/2026/03/30/ukraines-first-lady-comes-to-dallas-to-remind-us-of-the-terror-of-war/" target="_blank">Ukraine&#x27;s first lady comes to Dallas to remind Americans of the terror of war</a><span class="source">Dallas Morning News</span>
+            <span class="desc">Olena Zelenska visited Dallas for a public appearance aimed at sustaining American attention on Ukraine&#x27;s plight, even as the Iran conflict dominates U.S. foreign policy bandwidth.</span>
         </li>
     </ul>
 </section>
@@ -378,27 +464,27 @@
     </div>
     <ul class="link-list">
         <li>
-            <a href="https://www.wsj.com/articles/suspected-sabotage-of-deep-sea-cable-triggers-first-nato-led-response-337119ba" target="_blank">Suspected Sabotage of Deep-Sea Cable Triggers First NATO-Led Response</a><span class="source">WSJ</span>
+            <a href="https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e" target="_blank">Freed Israeli hostages still had shrapnel in their bodies from Oct. 7 attack</a><span class="source">WSJ</span>
             
         </li>
         <li>
-            <a href="https://www.wsj.com/articles/rwanda-backed-rebels-enter-congo-safe-haven-city-aid-hub-09fdccb8" target="_blank">Rwanda-Backed Rebels Enter Congo&#x27;s Safe-Haven City and Aid Hub</a><span class="source">WSJ</span>
+            <a href="https://www.axios.com/2026/03/30/trump-war-department-wind-projects-pentagon" target="_blank">Wind projects delayed as Trump&#x27;s Pentagon reviews stall approvals</a><span class="source">Axios</span>
             
         </li>
         <li>
-            <a href="https://www.theguardian.com/world/2026/mar/26/sudan-drone-strikes-civilian-targets-north-darfur-market-north-kordofan-truck" target="_blank">Two Drone Strikes on Civilian Targets Kill 28 in Sudan</a><span class="source">The Guardian</span>
+            <a href="https://www.axios.com/2026/03/29/some-dems-2028-strategy-a-straight-white-christian-man" target="_blank">Some Democrats&#x27; 2028 strategy: nominate a straight, white, Christian man</a><span class="source">Axios</span>
             
         </li>
         <li>
-            <a href="https://www.axios.com/2026/03/29/some-dems-2028-strategy-a-straight-white-christian-man" target="_blank">Some Democrats&#x27; 2028 Strategy: Run a Straight, White, Christian Man</a><span class="source">Axios</span>
+            <a href="https://www.washingtonexaminer.com/news/4509019/pope-leo-god-doesnt-listen-to-prayers-of-those-who-wage-war/" target="_blank">Pope Leo calls for peace, says God doesn&#x27;t listen to prayers of &#x27;those who wage war&#x27;</a><span class="source">Washington Examiner</span>
             
         </li>
         <li>
-            <a href="https://www.wsj.com/articles/palestinians-flock-back-to-northern-gaza-on-foot-after-hostage-release-breakthrough-3f60e2db" target="_blank">Palestinians Stream Back to Northern Gaza on Foot After Hostage Breakthrough</a><span class="source">WSJ</span>
+            <a href="https://www.washingtonexaminer.com/news/crime/4507472/doj-california-men-women-prisons/" target="_blank">DOJ investigates California policy of placing men in women&#x27;s prisons</a><span class="source">Washington Examiner</span>
             
         </li>
         <li>
-            <a href="https://www.wsj.com/articles/freed-israeli-hostages-still-had-shrapnel-in-their-bodies-from-oct-7-attack-3de8cd1e" target="_blank">Freed Israeli Hostages Still Had Shrapnel in Their Bodies From Oct. 7</a><span class="source">WSJ</span>
+            <a href="https://www.washingtonexaminer.com/news/white-house/4509002/white-house-ballroom-military-bunker/" target="_blank">White House ballroom will include military bunker, Trump says</a><span class="source">Washington Examiner</span>
             
         </li>
     </ul>
