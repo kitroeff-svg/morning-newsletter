@@ -177,6 +177,15 @@ HIGHER EDUCATION / TRUMP VS. UNIVERSITIES (use these to enrich the right and lef
 Return a JSON object with exactly these fields:
 
 {{
+  "morning_summary": "A punchy, authoritative 3-5 sentence prose summary of the most important stories of the day. This is the first thing Natalie reads — make it count. Name names, cite numbers, convey stakes. No bullet points, just tight prose. Think of it as a top editor's note on what matters most this morning.",
+
+  "coming_up": [
+    {{
+      "label": "Short label, e.g. 'This week' or 'Wednesday' or 'Friday deadline'",
+      "text": "1-2 sentences on what to watch for. Be specific about timing, who is involved, and what the outcome could mean."
+    }}
+  ],  // 3-5 upcoming events or story developments to watch in the next few days — scheduled votes, court dates, diplomatic meetings, expected announcements, earnings, etc.
+
   "top_stories": [
     {{
       "category": "Category name — e.g. Politics, International, Economy, Justice, Climate, Technology, Culture. Use whatever categories fit today's news. Aim for 3-5 categories total.",
@@ -303,10 +312,34 @@ def divider():
     return """
 <div class="divider"><div class="divider-dot"></div><div class="divider-dot"></div><div class="divider-dot"></div></div>"""
 
+def render_coming_up(items):
+    rows = []
+    for item in items:
+        label_esc = html_module.escape(item.get("label", ""))
+        text_esc = html_module.escape(item.get("text", ""))
+        rows.append(f"""        <li>
+            <span class="coming-label">{label_esc}</span>
+            <span class="coming-text">{text_esc}</span>
+        </li>""")
+    return '<ul class="coming-list">\n' + "\n".join(rows) + "\n    </ul>"
+
 def render_html(data):
     date_str = datetime.now().strftime("%A, %B %d, %Y")
 
     sections = []
+
+    # Morning summary
+    summary_text = html_module.escape(data.get("morning_summary", ""))
+    sections.append(f'<div class="morning-summary"><p>{summary_text}</p></div>')
+
+    # Coming up
+    if data.get("coming_up"):
+        sections.append(dot_section(
+            "Coming Up", COLORS["warm_green"],
+            render_coming_up(data["coming_up"])
+        ))
+
+    sections.append(divider())
 
     # Right summary
     sections.append(dot_section(
@@ -364,6 +397,7 @@ def render_html(data):
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
@@ -417,6 +451,45 @@ def render_html(data):
             text-transform: uppercase;
             letter-spacing: 0.18em;
             margin-top: 0.4rem;
+        }}
+        .morning-summary {{
+            font-family: 'Newsreader', serif;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #2c2a25;
+            margin-bottom: 2rem;
+        }}
+        .morning-summary p {{
+            margin: 0;
+        }}
+        .coming-list {{
+            list-style: none;
+            padding: 0;
+        }}
+        .coming-list li {{
+            display: flex;
+            gap: 1rem;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(228,224,216,0.5);
+            align-items: baseline;
+        }}
+        .coming-list li:last-child {{ border-bottom: none; }}
+        .coming-label {{
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: {COLORS["warm_green"]};
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-width: 80px;
+        }}
+        .coming-text {{
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #2c2a25;
+            line-height: 1.55;
         }}
         section {{ margin-bottom: 2.2rem; }}
         .section-header {{
