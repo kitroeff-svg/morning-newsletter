@@ -2,7 +2,7 @@ name: Generate Daily Briefing
 
 on:
   schedule:
-    - cron: '0 11 * * 1-5'  # 7am ET weekdays (11:00 UTC)
+    - cron: '0 11 * * *'  # 7am ET daily (11:00 UTC)
   workflow_dispatch:          # also lets you trigger it manually from GitHub
 
 jobs:
